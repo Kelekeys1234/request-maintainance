@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bee59ba6-f94d-4b94-988c-2ee527bfd04d">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<subDataset name="Dataset1" uuid="bf3434b3-2825-4a72-82a6-f68db53a82e9">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<subDataset name="Dataset2" uuid="9c7c5deb-d31e-4701-b3a2-420132abffcf">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="office" class="java.lang.String"/>
+	<field name="client" class="java.lang.String"/>
+	<field name="vehicle" class="java.lang.String"/>
+	<field name="driver" class="java.lang.String"/>
+	<field name="location" class="java.lang.String"/>
+	<field name="complaint" class="java.lang.String"/>
+	<field name="createdOn" class="java.util.Date"/>
+	<field name="breakdown" class="java.lang.String"/>
+	<variable name="office1" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{office}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="112" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="-10" width="595" height="60" uuid="0e65d8df-c2f6-4688-9a5b-c922a6bec9e7"/>
+				<textElement textAlignment="Center">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ALL VEHICLE MAINTAINANCE HISTORY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="50" width="69" height="29" uuid="d6f288f5-f1cb-40a0-b392-d229dfaadc59"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Office]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="49" width="100" height="30" uuid="8eb0ea58-3075-4b84-af5e-bf9de7dd85d3"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{office}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="59" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="-10" width="71" height="27" uuid="195a9551-cea1-4cf2-bc30-0dfca1c58e80"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Client]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="-12" width="100" height="30" uuid="f9822d97-96ad-4f20-a09b-81d7e6732711"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{client}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-1" y="29" width="70" height="29" uuid="b5ce9e8d-76bc-4d21-8fd2-a265f2e4f27c"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Vehicle]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="29" width="100" height="30" uuid="26dd7cc5-333d-43ec-be9d-8c7974e23869"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vehicle}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="129" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="68" height="29" uuid="1732e15e-e1c2-4229-80ce-6ed65595a22d"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Drivers]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="50" width="71" height="29" uuid="37a6a5e1-1514-478f-9981-618014391100"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Breakdown]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="90" width="69" height="28" uuid="86d8e0e5-2f55-453a-8a9d-250946be1333"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Location]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="9" width="100" height="30" uuid="e83d88df-4fb9-41d6-8d6c-8c508e47513d"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{driver}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="50" width="100" height="30" uuid="fe69e182-e561-48a4-a7fe-3a5ede9bbb87"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{breakdown}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="89" width="100" height="30" uuid="407b0ce8-075e-4a7c-a1c1-9023bb006c76"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{location}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="51" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="8" width="71" height="27" uuid="3d4e6d55-7bb7-40ee-9d74-73d018decbce"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Complaint]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="79" y="6" width="100" height="30" uuid="84b7a39e-ed3e-4bf9-9c87-3d7a2ba722b7"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{complaint}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="71" height="30" uuid="a70c297a-b84d-43d1-8660-d379a7377010"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="0" width="99" height="30" uuid="d9da8a00-8eca-47eb-b147-60dd78cead99"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{createdOn}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
